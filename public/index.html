@@ -1,114 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tProxy</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      font-size: 2em;
-      margin-bottom: -3px;
-    }
-    .search-container {
-      display: flex;
-      flex-direction: row;
-      border: 1px solid #ccc;
-      border-radius: 25px;
-      padding: 10px;
-      max-width: 700px;
-      width: 100%;
-    }
-    .search-container input {
-      border: none;
-      width: 100%;
-      padding: 0px;
-      outline: none;
-      border-radius: 25px;
-    }
-    .search-container button {
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-    }
-    .links {
-      margin-top: 20px;
-      margin-left: 80px;
-    }
-    .links a {
-      margin-right: 80px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLEXILE ARCADE PROXY</title>
+    <link rel="icon" type="image/png" href="https://cdn.glitch.global/5c2cb934-0c5a-4e22-9abd-1591c7cf6a9c/6e5e1dcc-f1f3-492d-a396-f3d7077ee68f.image-fotor-bg-remover-20230806125936%20(1).png?v=1691387992370">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background: url(https://cdn.glitch.global/595c0b59-ffda-42dc-be07-bf0564511e92/6fa06a64-56e3-41f8-9777-9bcdf149b03c.image.png?v=1697314046228);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: -3px;
+        }
+        .search-container {
+            background: #27292e;
+            display: flex;
+            flex-direction: row;
+            border: 2px solid #b03232;
+            border-radius: 100px;
+            padding: 1px;
+            height: 45px;
+            width: 600px;
+            align-items: center; /* Center vertically */
+        }
+        .search-container input {
+            background: #27292e;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center; /* Center horizontally */
+        }
+        .search-container button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <h1>tProxy v2</h1>
-  <div id="haha"></div>
+    <img src="https://cdn.glitch.global/8533ca4b-6fa9-468c-a0bb-b90172e91dcc/04d0f9c2-4d9c-4db7-b356-751b458fdf3b.image.png?v=1691895722806">
+    <link rel="stylesheet" href="/oldcss.css" />
+    <div id="haha"></div>
 
-  <div class="search-container">
-    <input type="text" placeholder="Enter URL and hit the icon on the right..." maxlength="50">
-    <div class="search-icon">
-      <i class="fas fa-search" onclick="getSite()"></i>
+    <div class="search-container">
+        <input type="text" placeholder="Enter URL & Search The Web Freely..." maxlength="50" onkeypress="handleKeyPress(event)">
+        <div class="search-icon">
+            <script>
+                function getSiteUrl() {
+                    const siteUrl = window.location.href;
+                    alert('Site URL: ' + siteUrl);
+                }
+
+                function handleKeyPress(event) {
+                    // Check if the pressed key is Enter (key code 13)
+                    if (event.key === 'Enter') {
+                        getSite();
+                    }
+                }
+            </script>
+        </div>
     </div>
-  </div>
 
-  <div class="links">
-    <a href="stargazers.html">Stargazers</a>
-    <a href="https://github.com/SevenworksDev/tProxy">GitHub + Setup tProxy for your own</a>
-    <a href="https://sevenworks.eu.org">More Projects</a>
-  </div>
+    <script>
+        var haha = document.getElementById("haha");
 
-  <script>
-    var haha = document.getElementById("haha");
+        function lmao() {
+            var lol = ['ㅤ'];
 
-    function lmao(){
-      var lol = [
-        'Super cool site that displays sites!',
-        'Bypassing web filters since a long time ago.',
-        'TitaniumNetwork sucks, cry about it.',
-        'Do your homework.',
-        'Too slow? Host it yourself instead of complaining non-stop about your issues.',
-        'The voices in my head told me to finish this site.',
-        'Breaking every bone in your body since 1979.',
-        'If you see ads on this site, this idiot is making money off my stuff.',
-        'how do i type',
-        'What do I even put here?',
-        'yoooooooooooooooooooo!',
-        'tProxy for dummies: Type in a URL below to access it.',
-        'Dear Teachers, This is TOTALLY a learning resource.',
-        'I got in trouble for this once.',
-        'Always check if a school chrome extension has a privacy policy, If not then you can punch your school administrators multiple times.',
-        'Cookie Clicker is useless, stop playing it.',
-        'How did this blow up again?',
-        'Submit an issue on GitHub if something broke in tProxy. (If a website being used via tProxy breaks, not our problem)',
-        'Do people use this anymore?',
-        '*cricket noises*'
-      ];
+            var hehe = Math.floor(Math.random() * lol.length);
+            haha.textContent = lol[hehe];
+        }
 
-      var hehe = Math.floor(Math.random() * lol.length);
-      haha.textContent = lol[hehe];
-    }
+        lmao()
 
-    lmao()
+        function getSite() {
+            let inputValue = document.querySelector('input').value;
 
-    function getSite() {
-      let inputValue = document.querySelector('input').value;
+            if (!inputValue.startsWith('http://') && !inputValue.startsWith('https://')) {
+                inputValue = 'http://' + inputValue;
+            }
 
-      if (!inputValue.startsWith('http://') && !inputValue.startsWith('https://')) {
-        inputValue = 'http://' + inputValue;
-      }
-
-      const encodedValue = btoa(inputValue);
-      window.location.href = "/web/_" + encodedValue + '_/';
-    }
-  </script>
+            const encodedValue = btoa(inputValue);
+            window.location.href = "/web/_" + encodedValue + '_/';
+        }
+    </script>
 </body>
 </html>
