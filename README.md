@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLEXILE ARCADE PROXY</title>
+    <title>PLEXILE ARCADE PROXY</title> 
     <link rel="icon" type="image/png" href="https://cdn.glitch.global/5c2cb934-0c5a-4e22-9abd-1591c7cf6a9c/6e5e1dcc-f1f3-492d-a396-f3d7077ee68f.image-fotor-bg-remover-20230806125936%20(1).png?v=1691387992370">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
@@ -120,17 +120,18 @@
         }
 
         .header {
-            background-color: #12161D; /* Change the color of the rectangle box here */
+               background-color: #12161D; /* Change the color of the rectangle box here */
             color: #fff; /* Text color inside the rectangle box is white */
             text-align: center;
-            padding: 20px 0;
+            padding: 15px 0;
             position: fixed;
-            bottom: 0;
-            width: 100%;
+            bottom: 10px;
+            width: 98%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            border-radius: 25px;
         }
 
         .header-icons {
