@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLEXILE ARCADE | Proxy</title>
+    <link rel="icon" type="image/png" href="https://cdn.glitch.global/2b25e860-636a-4eab-b48e-c6ae1aa92d6b/0ab56e19-2879-494d-8a3f-f79afb755ec1.image-fotor-bg-remover-20240127224610.png?v=1706417182506">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background: url(https://cdn.glitch.global/595c0b59-ffda-42dc-be07-bf0564511e92/6fa06a64-56e3-41f8-9777-9bcdf149b03c.image.png?v=1697314046228);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 85vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: -3px;
+        }
+        .search-container {
+            background: #27292e;
+            display: flex;
+            flex-direction: row;
+            border: 2px solid #b03232;
+            border-radius: 100px;
+            padding: 1px;
+            height: 45px;
+            width: 600px;
+            align-items: center; /* Center vertically */
+           margin-top: 0px;
+
+        }
+        .search-container input {
+            background: #27292e;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center; /* Center horizontally */
+        }
+        .search-container button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+        img {
+            margin-top: 0px; /* Adjust this value to position the image as desired */
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <img src="https://cdn.glitch.global/2b25e860-636a-4eab-b48e-c6ae1aa92d6b/IOojLd_43FOS6OoUQ1Lal-transformed.png?v=1706417073321">
+    <link rel="stylesheet" href="/oldcss.css" />
+    <div id="haha"></div>
+
+    <div class="search-container">
+        <input type="text" placeholder="Enter URL & Search The Web Freely..." maxlength="50" onkeypress="handleKeyPress(event)">
+        <div class="search-icon">
+            <script>
+                function getSiteUrl() {
+                    const siteUrl = window.location.href;
+                    alert('Site URL: ' + siteUrl);
+                }
+
+                function handleKeyPress(event) {
+                    // Check if the pressed key is Enter (key code 13)
+                    if (event.key === 'Enter') {
+                        getSite();
+                    }
+                }
+            </script>
+        </div>
+    </div>
+
+    <script>
+        var haha = document.getElementById("haha");
+
+        function lmao() {
+            var lol = ['ㅤ'];
+
+            var hehe = Math.floor(Math.random() * lol.length);
+            haha.textContent = lol[hehe];
+        }
+
+        lmao()
+
+        function getSite() {
+            let inputValue = document.querySelector('input').value;
+
+            if (!inputValue.startsWith('http://') && !inputValue.startsWith('https://')) {
+                inputValue = 'http://' + inputValue;
+            }
+
+            const encodedValue = btoa(inputValue);
+            window.location.href = "/web/_" + encodedValue + '_/';
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snow Background</title>
+</head>
+<body>
+  <div class="snow-container"></div>
+  <style>    
+  .snowball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #b03232; /* Default color for snowballs */
+  border-radius: 50%;
+  pointer-events: none; /* Prevent interaction with snowballs */
+  z-index: -1; /* Ensure snowballs are behind other content */
+  opacity: 0.6; /* Default opacity */
+  animation: snowdrift 8s infinite alternate; /* Faster animation */
+}
+
+.transparent {
+  opacity: 0.4; /* Adjusted opacity for most snowballs */
+}
+
+.light {
+  background-color: #f5aaaa; /* Lighter color for some snowballs */
+}
+
+.small {
+  width: 5px;
+  height: 5px;
+}
+
+@keyframes snowdrift {
+  0% {
+    transform: translate(-4px, -4px);
+  }
+  100% {
+    transform: translate(4px, 4px);
+  }
+}
+  </style>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const numSnowballs = 70; // Reduce the number of snowballs
+  const body = document.body;
+  const padding = 10; // Adjust this value as needed to control the spread around the edges
+
+  for (let i = 0; i < numSnowballs; i++) {
+    const snowball = document.createElement("div");
+    snowball.classList.add("snowball");
+
+    // Randomize position within the visible viewport with padding to avoid edges
+    const x = Math.random() * (window.innerWidth - 2 * padding) + padding;
+    const y = Math.random() * (window.innerHeight + 0); // Add extra to ensure visibility at the bottom
+    snowball.style.left = `${x}px`;
+    snowball.style.top = `${y}px`;
+
+    // Randomize size and opacity
+    const size = Math.random() * 10 + 5; // Random size between 5px and 15px
+    snowball.style.width = `${size}px`;
+    snowball.style.height = `${size}px`;
+
+    // Apply transparent class to most snowballs
+    if (Math.random() < 0.8) {
+      snowball.classList.add("transparent");
+    }
+
+    // Add lighter class to some snowballs
+    if (Math.random() < 0.3) {
+      snowball.classList.add("light");
+    }
+
+    // Add smaller class to some snowballs
+    if (Math.random() < 0.5) {
+      snowball.classList.add("small");
+    }
+
+    body.appendChild(snowball); // Append snowball to body
+  }
+});
+  </script>
+
+
+
+
+    <style>
+
+        ::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #16181C;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #16181C;
+  border-radius: 15px;
+  height: 2px;
+}
+    </style>
+
+  <script src="/panicbutton.js"></script>
+
+
+
+        </style>
+
+  <style type="text/css">
+    body {
+      cursor: url("https://cdn.glitch.global/5974de2d-be05-4647-b3ac-08c6e71752fc/Removal-791.png?v=1707616156693"),
+        auto;
+    }
+  </style>
