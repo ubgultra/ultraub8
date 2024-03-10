@@ -5,216 +5,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PLEXILE ARCADE | Proxy</title>
     <link rel="icon" type="image/png" href="https://cdn.glitch.global/2b25e860-636a-4eab-b48e-c6ae1aa92d6b/0ab56e19-2879-494d-8a3f-f79afb755ec1.image-fotor-bg-remover-20240127224610.png?v=1706417182506">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+      
         body {
-            background: url(https://cdn.glitch.global/595c0b59-ffda-42dc-be07-bf0564511e92/6fa06a64-56e3-41f8-9777-9bcdf149b03c.image.png?v=1697314046228);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 85vh;
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; 
+            background: #16181c;
+            font-weight: 400;
         }
-        h1 {
-            font-size: 2em;
-            margin-bottom: -3px;
-        }
-        .search-container {
-            background: #27292e;
-            display: flex;
-            flex-direction: row;
-            border: 2px solid #b03232;
-            border-radius: 100px;
-            padding: 1px;
-            height: 45px;
-            width: 580px; 
-            align-items: center; 
-            margin-top: 0px;
-            transition: width 0.5s ease; 
-        }
-        .search-container:hover,
-        .search-container:focus {
-            width: 630px;
-        }
-        .search-container input {
-            background: #27292e;
-            border: none;
-            width: 100%;
-            padding: 10px;
-            outline: none;
+
+        .nav {
+            position: fixed;
+            top: -80px; 
+            left: 13px;
+            width: 98%;
             border-radius: 25px;
-            font-size: 15px;
-            font-weight: bold;
-            text-align: center; 
+            background-color: #12161D;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 7vw; 
+            z-index: 1000; 
+            transition: top 0.5s ease; 
         }
-        .search-container button {
+
+        .nav:hover {
+            top: 20px; 
+        }
+
+        .nav .logo {
+            margin-right: auto;
+            margin-bottom: 20px;
+            margin-left: 30px;
+        }
+
+        .nav .logo img {
+            height: 128px;
+        }
+
+        .nav .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0; 
+            justify-content: center;
+            align-items: center; 
+            margin-left: -100px; 
+        }
+
+        .nav .nav-links .nav-item {
+            font-size: 20px;
+            color: #b03232;
+            text-decoration: none;
+            transition: color 0.2s linear;
+            margin-right: 32px; 
+            font-family: 'Inter', sans-serif; 
+            font-weight: bold; 
+            letter-spacing: 2px; 
+        }
+
+        .nav .nav-links .nav-item:last-child {
+            margin-right: 100; 
+        }
+
+        .nav .nav-links .nav-item:hover {
+            color: #892929;
+        }
+
+        
+        select {
+            background: #27292e;
+            font-family: 'Montserrat';
+            color: #fff;
+            border-radius: 5px;
+            padding: 5px;
+            outline: none;
+            transition: 300ms;
+        }
+
+        label {
+            font-family: 'Inter';
+        }
+
+        select:active {
+            transform: scale(1.05);
+        }
+
+        option {
+            font-family: 'Inter';
+            color: #b03232;
+            padding: 5px;
+        }
+
+        .fullscreen-iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             border: none;
-            background: transparent;
-            cursor: pointer;
         }
-        img {
-            margin-top: 0px; 
+
+        .spacer {
+            flex-grow: 1; 
         }
-      
-      
-      
-        ::-webkit-scrollbar {
-  width: 12px;
-  border-radius: 13px;
-}
-
-::-webkit-scrollbar-track {
-  background: #16181C;
-  border-radius: 0px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #16181C;
-  border-radius: 15px;
-  height: 2px;
-}
-      
-        .snowball {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #b03232; 
-  border-radius: 50%;
-  pointer-events: none; 
-  z-index: -1; 
-  opacity: 0.6; 
-  animation: snowdrift 8s infinite alternate; 
-}
-
-.transparent {
-  opacity: 0.4; 
-}
-
-.light {
-  background-color: #f5aaaa; 
-}
-
-.small {
-  width: 5px;
-  height: 5px;
-}
-
-@keyframes snowdrift {
-  0% {
-    transform: translate(-4px, -4px);
-  }
-  100% {
-    transform: translate(4px, 4px);
-  }
-}
-      
     </style>
 </head>
 <body>
-   <br>
-  <br>
-   <br>
-  <br>
-  <br>
-  
-    <img src="https://cdn.glitch.global/2b25e860-636a-4eab-b48e-c6ae1aa92d6b/IOojLd_43FOS6OoUQ1Lal-transformed.png?v=1706417073321">
-    <link rel="stylesheet" href="/oldcss.css" />
-    <div id="haha"></div>
-
-    <div class="search-container">
-        <input type="text" placeholder="Enter URL & Search The Web Freely..." maxlength="50" onkeypress="handleKeyPress(event)">
-        <div class="search-icon">
-            <script>
-                function getSiteUrl() {
-                    const siteUrl = window.location.href;
-                    alert('Site URL: ' + siteUrl);
-                }
-
-                function handleKeyPress(event) {
-                    
-                    if (event.key === 'Enter') {
-                        getSite();
-                    }
-                }
-            </script>
+    <nav class="nav">
+        <div class="logo">
+            <img src="https://cdn.glitch.global/2b25e860-636a-4eab-b48e-c6ae1aa92d6b/IOojLd_43FOS6OoUQ1Lal-transformed.png?v=1706417073321" alt="Logo">
         </div>
+        <ul class="nav-links">
+            <li><a href="/" class="nav-item">HOME</a></li>
+            <li><a href="/games.html" class="nav-item">GAMES</a></li>
+            <li><a href="/about.html" class="nav-item">APPS</a></li>
+            <li><a href="/location.html" class="nav-item">PROXY</a></li>
+            <li><a href="/settings.html" class="nav-item"><i class="fas fa-gear"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content"> 
+        <iframe style="margin-top: 80px; width: 100%; border: none; height: calc(100vh - 80px);" src="/proxy.html"></iframe>
     </div>
 
-    <script>
-        var haha = document.getElementById("haha");
+    <script src="/panicbutton.js"></script>
+    <script src="/themes.js"></script>  
 
-        function lmao() {
-            var lol = ['ㅤ'];
-
-            var hehe = Math.floor(Math.random() * lol.length);
-            haha.textContent = lol[hehe];
+    <style type="text/css">
+        body {
+            cursor: url("https://cdn.glitch.global/5974de2d-be05-4647-b3ac-08c6e71752fc/Removal-791.png?v=1707616156693"), auto;
         }
 
-        lmao()
-
-        function getSite() {
-            let inputValue = document.querySelector('input').value;
-
-            if (!inputValue.startsWith('http://') && !inputValue.startsWith('https://')) {
-                inputValue = 'http://' + inputValue;
-            }
-
-            const encodedValue = btoa(inputValue);
-            window.location.href = "/web/_" + encodedValue + '_/';
+        body {
+            overflow: hidden;
         }
-    </script>
+
+        ::-webkit-scrollbar {
+            width: 12px;
+            border-radius: 13px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #16181C;
+            border-radius: 0px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #b03232;
+            border-radius: 15px;
+            height: 2px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter';
+        }
+    </style>
+
+    <iframe src="/proxy.html" frameborder="0" class="fullscreen-iframe"></iframe>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+    </style>
 </body>
 </html>
-
-
- <script>
-  document.addEventListener("DOMContentLoaded", function() {
-  const numSnowballs = 80;
-  const body = document.body;
-  const padding = 10;
-
-  for (let i = 0; i < numSnowballs; i++) {
-    const snowball = document.createElement("div");
-    snowball.classList.add("snowball");
-
-
-    const x = Math.random() * (window.innerWidth - 2 * padding) + padding;
-    const y = Math.random() * (window.innerHeight + 0); 
-    snowball.style.left = `${x}px`;
-    snowball.style.top = `${y}px`;
-
-    
-    const size = Math.random() * 10 + 5; 
-    snowball.style.width = `${size}px`;
-    snowball.style.height = `${size}px`;
-
-    
-    if (Math.random() < 0.8) {
-      snowball.classList.add("transparent");
-    }
-
-   
-    if (Math.random() < 0.3) {
-      snowball.classList.add("light");
-    }
-
- 
-    if (Math.random() < 0.5) {
-      snowball.classList.add("small");
-    }
-
-    body.appendChild(snowball); 
-  }
-});
-  </script>
-
- </style>
-
-  <style type="text/css">
-    body {
-      cursor: url("https://cdn.glitch.global/5974de2d-be05-4647-b3ac-08c6e71752fc/Removal-791.png?v=1707616156693"),
-        auto;
-    }
-  </style>
