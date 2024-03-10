@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<title>PLEXILE ARCADE | Setttings</title>
+<title>PLEXILE ARCADE | Settings</title>
       <link rel="icon" type="image/png" href="https://cdn.glitch.global/2b25e860-636a-4eab-b48e-c6ae1aa92d6b/0ab56e19-2879-494d-8a3f-f79afb755ec1.image-fotor-bg-remover-20240127224610.png?v=1706417182506">
 <html>
   <head>
+   
+    <link rel="stylesheet" href="/css/navbarrr.css" />
+  <link rel="stylesheet" href="/css/extras.css" />
+        <link rel="stylesheet" href="/css/settings.css" />
+      <link rel="stylesheet" href="/css/scrollbar.css" />
+     <link rel="stylesheet" href="/styles.css" />
+     <link rel="stylesheet" href="styles1.css">
+          <script src="/js/settings.js"></script>
+    <script src="/js/cloak.js"></script>
+      <script src="script2.js"></script>
+      <script src="/themes.js"></script>  
+<script src="panicbutton.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<style>
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+  </head>
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <img src="https://cdn.glitch.global/2b25e860-636a-4eab-b48e-c6ae1aa92d6b/IOojLd_43FOS6OoUQ1Lal-transformed.png?v=1706417073321" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/" class="nav-item">HOME</a></li>
+            <li><a href="/games.html" class="nav-item">GAMES</a></li>
+            <li><a href="/about.html" class="nav-item">APPS</a></li>
+            <li><a href="/location.html" class="nav-item">PROXY</a></li>
+            <li><a href="/settings.html" class="nav-item"><i class="fas fa-gear"></i></a></li>ㅤ
+        </ul>
+    </nav>
+</body>
+  
+          <style>
+    body {
+        overflow: hidden;
+    }
+          
+          
+        
+      body {
+        cursor: url("https://cdn.glitch.global/5974de2d-be05-4647-b3ac-08c6e71752fc/Removal-791.png?v=1707616156693"),
+          auto;
+      }
+          
+</style>
+  
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
 * {
   margin: 0;
@@ -117,9 +159,165 @@ option {
             50% { transform: translateX(5px); }
             75% { transform: translateX(-5px); }
             100% { transform: translateX(5px); }
-        }
-      
-::-webkit-scrollbar {
+
+  </style>
+  <style>
+  body {
+  color: #fff;
+}
+
+
+
+h1 {
+  font-size: 50px;
+  margin: 20px;
+}
+
+h2{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.main-content {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.box {
+  background: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  padding-left: 47px;
+  padding-right: 47px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+#title, #icon {
+    height: 45px; 
+    width: 580px; 
+    border-radius: 100px; 
+    outline: none; 
+    border: 2px solid #b03232; 
+    background: #27292e; 
+    color: white; 
+    font-size: 16px; 
+    padding-right: 10px; 
+    padding-left: 250px;
+    line-height: 45px; 
+    transition: width 0.5s ease; 
+}
+
+#title:hover,
+#title:focus,
+#icon:hover,
+#icon:focus {
+    width: 632px; 
+}
+
+
+
+
+::placeholder {
+  color: #fff;
+  font-size: 16px;
+}
+  </style>
+  <style>
+  .cloak {
+  cursor: pointer;
+  background-color: #b03232;
+  border: none;
+  color: rgb(248, 244, 244);
+  padding: 13px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+  transition: all 0.2s ease;
+  transform: scale(1);
+}
+.cloak:hover {
+  transform: scale(1.1);
+  border-radius: 14px;
+}
+.cloak:active {
+  transform: scale(0.9);
+  border-radius: 15px;
+}
+
+/* Style for input boxes */
+.input {
+  width: 200px;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for dropdown */
+#premadecloaks {
+  width: 220px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+/* Style for buttons */
+.button {
+  padding: 8px 16px;
+  background-color: #b03232;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.button:hover {
+  transform: scale(1.2);
+  border-radius: 5px;
+}
+.button:active {
+  transform: scale(0.8);
+  border-radius: 10px;
+}
+
+
+/* Style for section text */
+.section-text {
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Center the content */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+  </style>
+  <style>
+  ::-webkit-scrollbar {
   width: 12px;
   border-radius: 13px;
 }
@@ -133,9 +331,10 @@ option {
   background: #b03232;
   border-radius: 15px;
   height: 2px;
-}      
-
-body {
+}
+  </style>
+  <style>
+  body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -443,7 +642,9 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-.snowball {
+  </style>
+  <style>
+  .snowball {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -475,199 +676,9 @@ input:checked + .slider:before {
   100% {
     transform: translate(4px, 4px);
   }
-
-.cloak {
-  cursor: pointer;
-  background-color: #b03232;
-  border: none;
-  color: rgb(248, 244, 244);
-  padding: 13px 50px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 15px;
-  transition: all 0.2s ease;
-  transform: scale(1);
-}
-.cloak:hover {
-  transform: scale(1.1);
-  border-radius: 14px;
-}
-.cloak:active {
-  transform: scale(0.9);
-  border-radius: 15px;
 }
 
-/* Style for input boxes */
-.input {
-  width: 200px;
-  padding: 8px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Style for dropdown */
-#premadecloaks {
-  width: 220px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
-}
-
-/* Style for buttons */
-.button {
-  padding: 8px 16px;
-  background-color: #b03232;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.button:hover {
-  transform: scale(1.2);
-  border-radius: 5px;
-}
-.button:active {
-  transform: scale(0.8);
-  border-radius: 10px;
-}
-
-
-/* Style for section text */
-.section-text {
-  margin-top: 10px;
-  font-size: 14px;
-  font-style: italic;
-}
-
-/* Center the content */
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 50px;
-}      
-
-body {
-  color: #fff;
-}
-
-
-
-h1 {
-  font-size: 50px;
-  margin: 20px;
-}
-
-h2{
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-h3 {
-  font-weight: 300;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-h4 {
-  font-weight: 300;
-  font-size: 18px;
-}
-
-.main-content {
-  margin-top: 80px;
-  text-align: center;
-}
-
-.box {
-  background: none;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 10px;
-  padding-left: 47px;
-  padding-right: 47px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-
-
-#title, #icon {
-    height: 45px; 
-    width: 580px; 
-    border-radius: 100px; 
-    outline: none; 
-    border: 2px solid #b03232; 
-    background: #27292e; 
-    color: white; 
-    font-size: 16px; 
-    padding-right: 10px; 
-    padding-left: 250px;
-    line-height: 45px; 
-    transition: width 0.5s ease; 
-}
-
-#title:hover,
-#title:focus,
-#icon:hover,
-#icon:focus {
-    width: 632px; 
-}
-
-
-
-
-::placeholder {
-  color: #fff;
-  font-size: 16px;
-}
-      
-</style>
-
-          <script src="/js/settings.js"></script>
-    <script src="/js/cloak.js"></script>
-      <script src="script2.js"></script>
-      <script src="/themes.js"></script>  
-<script src="panicbutton.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  </head>
-<body>
-    <nav class="nav">
-        <div class="logo">
-            <img src="https://cdn.glitch.global/2b25e860-636a-4eab-b48e-c6ae1aa92d6b/IOojLd_43FOS6OoUQ1Lal-transformed.png?v=1706417073321" alt="Logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="/" class="nav-item">HOME</a></li>
-            <li><a href="/games.html" class="nav-item">GAMES</a></li>
-            <li><a href="/about.html" class="nav-item">APPS</a></li>
-            <li><a href="/location.html" class="nav-item">PROXY</a></li>
-            <li><a href="/settings.html" class="nav-item"><i class="fas fa-gear"></i></a></li>ㅤ
-        </ul>
-    </nav>
-</body>
-  
-          <style>
-    body {
-        overflow: hidden;
-    }
-          
-          
-        
-      body {
-        cursor: url("https://cdn.glitch.global/5974de2d-be05-4647-b3ac-08c6e71752fc/Removal-791.png?v=1707616156693"),
-          auto;
-      }
-          
-</style>
-  
+  </style>
   
    <h1></h1>
       <h3>ㅤ</h3>
@@ -788,6 +799,3 @@ document.addEventListener('touchmove', function(event) {
 
 </body>
 </html>
-
-
-  
