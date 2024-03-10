@@ -9,8 +9,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/public/css/navbar.css">
-  <link rel="stylesheet" href="/public/css/scrollbar.css" />
+  
  
 </head>
 <body>
@@ -59,4 +58,136 @@
     body {
         overflow: hidden;
     }
+
+
+::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #16181C;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b03232;
+  border-radius: 15px;
+  height: 2px;
+}
+
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter';
+}
+body {
+  background: #16181c;
+  font-weight: 400;
+}
+        .nav {
+            position: fixed;
+            top: 20px;
+            left: 13px;
+            width: 98%;
+            border-radius: 25px;
+            background-color: #12161D;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 7vw; 
+            z-index: 1000; 
+        }
+        .nav .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0; 
+            justify-content: center;
+            align-items: center; 
+            margin-left: -100px; 
+        }
+        .nav .nav-links .nav-item {
+            font-size: 20px;
+            color: #b03232;
+            text-decoration: none;
+            transition: color 0.2s linear;
+            margin-right: 32px; 
+            font-family: 'Inter', sans-serif; 
+            font-weight: bold; 
+            letter-spacing: 2px; 
+        }
+        .nav .nav-links .nav-item:last-child {
+            margin-right: 100; 
+        }
+        .nav .nav-links .nav-item:hover {
+            color: #892929;
+        }
+        .nav .logo {
+            margin-right: auto;
+            margin-bottom: 20px;
+          margin-left: 30px;
+        }
+        .nav .logo img {
+            height: 128px;
+        }
+        
+    
+      .nav-links {
+        
+      margin-right: 10;
+      
+      }
+
+
+
+select {
+  background: #27292e;
+  font-family: 'Montserrat';
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  transition: 300ms;
+}
+
+label {
+  font-family: 'Inter';
+}
+
+select:active {
+  transform: scale(1.05);
+}
+
+option {
+  font-family: 'Inter';
+  color: #b03232;
+  padding: 5px;
+}
+
+
+      #copyright {
+            font-size: 14px;
+            margin-top: 2px;
+            font-weight: bold; /* Increased font weight */
+            color: #b03232; /* Color of C Copyright PLEXILE ARCADE text */
+            cursor: pointer;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        #copyright:hover {
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(5px); }
+   
+   
 </style>
