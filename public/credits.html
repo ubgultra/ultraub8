@@ -72,268 +72,9 @@
     margin-bottom: 10px;
 }
       
-    
-       body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .button-container {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .control-btn {
-            background-color: #b03232;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: transform 0.3s;
-        }
-
-        .control-btn:hover {
-            animation: shake 0.5s;
-        }
-
-        @keyframes shake {
-            0% { transform: translate(0, 0); }
-            45% { transform: translate(-2px, 2px); }
-            55% { transform: translate(-1px, 4px); }
-          
-        }
-
-        .back-btn::before {
-            content: "\2190"; /* Unicode character for an arrow pointing left */
-        }
-
-        .fullscreen-btn::before {
-            content: "\26F6"; /* Unicode character for a fullscreen icon */
-        }
-
-        .report-btn::before {
-            content: "\26A0"; /* Unicode character for a warning/exclamation icon */
-        }
-
-        .embed-container {
-            width: 100%;
-            height: 100%;
-        }
-
-    iframe {
- display: block; 
- width: 100%; 
- height: 100%;
- border: none; 
- overflow-y: auto; 
- overflow-x: hidden;
-}
-        }
-
-
-body {
-            font-family: Arial, sans-serif;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-
-        
-.box-container {
-            display: flex;
-            justify-content: space-around;
-            max-width: 1200px;
-            margin: 20px auto;
-            flex-wrap: wrap;
-           
-
-    
-    
-        }
-
-        .box {
-            width: calc(14.2857% - 20px); /* Adjusted width for 7 boxes in a row with margin */
-              width: 150px;
-             height: 150px;
-            margin: 10px;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.2s, border-radius 0.3s;
-            border-radius: 15px;
-            background-color: #clear; 
-
-
-        }
-
-        .box:hover {
-            transform: scale(1.1);
-            border-radius: 0;
-        }
-
-        .box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 15px;
-        }
-
-        .box .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-            border-radius: 15px;
-        }
-
-        .box:hover .overlay {
-            opacity: 1;
-        }
-
-
-::-webkit-scrollbar {
-  width: 12px;
-  border-radius: 13px;
-}
-
-::-webkit-scrollbar-track {
-  background: #16181C;
-  border-radius: 0px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #b03232;
-  border-radius: 15px;
-  height: 2px;
-}
-
-.snowball {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #b03232; 
-  border-radius: 50%;
-  pointer-events: none; 
-  z-index: -1;
-  opacity: 0.6; 
-  animation: snowdrift 8s infinite alternate; 
-}
-
-.transparent {
-  opacity: 0.4; 
-}
-
-.light {
-  background-color: #f5aaaa; 
-}
-
-.small {
-  width: 5px;
-  height: 5px;
-}
-
-@keyframes snowdrift {
-  0% {
-    transform: translate(-4px, -4px);
-  }
-  100% {
-    transform: translate(4px, 4px);
-  }
-    
-body {
-            margin: 0;
-            padding: 0;
-            background-image: url('https://cdn.glitch.global/a6afb399-015e-40ac-96d7-92e23c3408bb/background.png?v=1702599189341'); 
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-family: Arial, sans-serif;
-            color: #b03232;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 5px; /* Increased margin-bottom to separate the text and buttons */
-            transition: transform 0.3s;
-        }
-
-        h1:hover {
-            transform: rotate(6deg) scale(1.2);
-          
-       }
-          
-
-        .button {
-            display: flex;
-            align-items: center;
-            padding: 13px 110px; /* Increased padding for a larger button */
-            margin: 10px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 21px; /* Slightly less round */
-            transition: transform 0.2s;
-            color: #fff;
-            font-size: 18px;
-            overflow: hidden;
-            
-        }
-
-        .icon {
-            max-width: 100%; /* Ensure the icon does not exceed the button's width */
-            max-height: 100%; /* Ensure the icon does not exceed the button's height */
-            width: 24px; /* Set a specific width for the icon */
-            height: 24px; /* Set a specific height for the icon */
-            margin-left: 10px;
-        }
-
-        #playButton {
-            background-color: #b03232;
-        }
-
-        #discordButton {
-            background-color: #b03232;
-        }
-
-        #playButton:hover,
-        #discordButton:hover {
-            transform: scale(1.1);
-            color: #fff;
-        }
-        
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter';
+
 }
 body {
   background: #16181c;
@@ -419,27 +160,191 @@ option {
   padding: 5px;
 }
 
+      ::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 13px;
+}
 
-      #copyright {
-            font-size: 14px;
-            margin-top: 2px;
-            font-weight: bold; /* Increased font weight */
-            color: #b03232; /* Color of C Copyright PLEXILE ARCADE text */
-            cursor: pointer;
-            transition: color 0.2s, transform 0.2s;
+::-webkit-scrollbar-track {
+  background: #16181C;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b03232;
+  border-radius: 15px;
+  height: 2px;
+}
+      
+ .snowball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #b03232; 
+  border-radius: 50%;
+  pointer-events: none; 
+  z-index: -1;
+  opacity: 0.6; 
+  animation: snowdrift 8s infinite alternate; 
+}
+
+.transparent {
+  opacity: 0.4; 
+}
+
+.light {
+  background-color: #f5aaaa; 
+}
+
+.small {
+  width: 5px;
+  height: 5px;
+}
+
+@keyframes snowdrift {
+  0% {
+    transform: translate(-4px, -4px);
+  }
+  100% {
+    transform: translate(4px, 4px);
+  }
+}
+
+ body {
+            font-family: Arial, sans-serif;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #16181C;
         }
 
-        #copyright:hover {
-            animation: shake 0.5s;
-        }
-
-        @keyframes shake {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            50% { transform: translateX(5px); }
-            75% { transform: translateX(-5px); }
-            100% { transform: translateX(5px); }
         
+.box-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1120px;
+            margin: 0px auto;
+            flex-wrap: wrap;
+           
+
+    
+    
+        }
+
+        .box {
+            width: calc(14.2857% - 20px); /* Adjusted width for 7 boxes in a row with margin */
+            width: 168px;
+            height: 168px;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s, border-radius 0.3s;
+            border-radius: 15px;
+            background-color: #clear; 
+
+
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+            border-radius: 0;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .box .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border-radius: 15px;
+        }
+
+        .box:hover .overlay {
+            opacity: 1;
+        }
+
+      
+      body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://cdn.glitch.global/a6afb399-015e-40ac-96d7-92e23c3408bb/background.png?v=1702599189341'); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            color: #b03232;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 5px; /* Increased margin-bottom to separate the text and buttons */
+            transition: transform 0.3s;
+        }
+
+        h1:hover {
+            transform: rotate(6deg) scale(1.2);
+          
+       }
+          
+
+        .button {
+            display: flex;
+            align-items: center;
+            padding: 13px 110px; /* Increased padding for a larger button */
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 21px; /* Slightly less round */
+            transition: transform 0.2s;
+            color: #fff;
+            font-size: 18px;
+            overflow: hidden;
+            
+        }
+
+        .icon {
+            max-width: 100%; /* Ensure the icon does not exceed the button's width */
+            max-height: 100%; /* Ensure the icon does not exceed the button's height */
+            width: 24px; /* Set a specific width for the icon */
+            height: 24px; /* Set a specific height for the icon */
+            margin-left: 10px;
+        }
+
+        #playButton {
+            background-color: #b03232;
+        }
+
+        #discordButton {
+            background-color: #b03232;
+        }
+
+        #playButton:hover,
+        #discordButton:hover {
+            transform: scale(1.1);
+            color: #fff;
+        }
+
+      
     </style>
 </head>
 
@@ -465,6 +370,21 @@ option {
     </nav>
 </body>
 
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  
+  
     <div class="header">
     </div>
 <br>
@@ -472,7 +392,7 @@ option {
         <section class="hero">
      
         <h2>Development Team</h2>
- <h5>ㅤ</h5>
+
         <p><b style="color: #fff"; </b>Jesus Andrade (Clipped) - Owner/Main Developer</p>
 
           <h5>Yep, Sadly I had no help & made this website completly by myself. I did use ChatGPT for 20% of the website because I really don't understand JavaScript.</h5>
@@ -485,12 +405,11 @@ option {
           
           
       <h2><b style="color: #b03232"; </b>Contributors</h2>
-          <h5>ㅤ</h5>
+          
 
         <p>Titanium Network - Creating the proxy system PLEXILE ARCADE Uses.</p>
         <p>Classroom6X - Providing 65% of the games on here.</p>
         <p>School Arcade - Providing 25% of the on here.</p>
-        <p>smxrtfoloo - Making the Navbar's code.</p>
           <p>3kh0 - Providing 10% of the on here.</p>
         
 
@@ -505,7 +424,7 @@ option {
           
           
           <h2><b style="color: #b03232"; </b>Partners<b style="color: #fff"; </b></h2>
-          <h5>ㅤ</h5>
+         
 
           
    <b style="color: #fff;"><h1><span><b style="color: #b03232;"></span></h1><center><h1></h1></center>
@@ -554,7 +473,6 @@ option {
 </html>
 
   
-  <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
   <div class="snow-container"></div>
