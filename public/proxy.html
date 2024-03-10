@@ -57,9 +57,9 @@
         img {
             margin-top: 0px; 
         }
-      
-      
-      
+
+
+
         ::-webkit-scrollbar {
   width: 12px;
   border-radius: 13px;
@@ -75,7 +75,7 @@
   border-radius: 15px;
   height: 2px;
 }
-      
+
         .snowball {
   position: absolute;
   width: 10px;
@@ -109,7 +109,7 @@
     transform: translate(4px, 4px);
   }
 }
-      
+
     </style>
 </head>
 <body>
@@ -127,45 +127,33 @@
     <div class="search-container">
         <input type="text" placeholder="Enter URL & Search The Web Freely..." maxlength="50" onkeypress="handleKeyPress(event)">
         <div class="search-icon">
-            <script>
-                function getSiteUrl() {
-                    const siteUrl = window.location.href;
-                    alert('Site URL: ' + siteUrl);
-                }
+          <script>
+              function getSite() {
+                  let inputValue = document.querySelector('.search-container input').value.trim();
 
-                function handleKeyPress(event) {
-                    
-                    if (event.key === 'Enter') {
-                        getSite();
-                    }
-                }
-            </script>
-        </div>
-    </div>
+                  if (isValidURL(inputValue)) {
+                      
+                      const encodedValue = btoa("http://" + inputValue);
+                      window.location.href = "/web/_" + encodedValue + '_/';
+                  } else {
+                     
+                      const searchQuery = '/search?q=' + encodeURIComponent(inputValue);
+                      window.location.href = "/web/_aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==_" + searchQuery;
+                  }
+              }
 
-    <script>
-        var haha = document.getElementById("haha");
+              function handleKeyPress(event) {
+                  if (event.key === 'Enter') {
+                      getSite();
+                  }
+              }
 
-        function lmao() {
-            var lol = ['ㅤ'];
-
-            var hehe = Math.floor(Math.random() * lol.length);
-            haha.textContent = lol[hehe];
-        }
-
-        lmao()
-
-        function getSite() {
-            let inputValue = document.querySelector('input').value;
-
-            if (!inputValue.startsWith('http://') && !inputValue.startsWith('https://')) {
-                inputValue = 'http://' + inputValue;
-            }
-
-            const encodedValue = btoa(inputValue);
-            window.location.href = "/web/_" + encodedValue + '_/';
-        }
-    </script>
+              function isValidURL(url) {
+                  
+                  const urlPattern = /^(http:\/\/|https:\/\/)?([\da-z.-]+)\.([a-z.]{2,})([/\w .-]*)*\/?$/i;
+                  return urlPattern.test(url);
+              }
+          </script>
 </body>
 </html>
 
@@ -186,22 +174,22 @@
     snowball.style.left = `${x}px`;
     snowball.style.top = `${y}px`;
 
-    
+
     const size = Math.random() * 10 + 5; 
     snowball.style.width = `${size}px`;
     snowball.style.height = `${size}px`;
 
-    
+
     if (Math.random() < 0.8) {
       snowball.classList.add("transparent");
     }
 
-   
+
     if (Math.random() < 0.3) {
       snowball.classList.add("light");
     }
 
- 
+
     if (Math.random() < 0.5) {
       snowball.classList.add("small");
     }
