@@ -6,12 +6,257 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PLEXILE ARCADE | ruffle</title>
     <link rel="icon" type="image/png" href="https://cdn.glitch.global/2b25e860-636a-4eab-b48e-c6ae1aa92d6b/0ab56e19-2879-494d-8a3f-f79afb755ec1.image-fotor-bg-remover-20240127224610.png?v=1706417182506">
-    <link rel="stylesheet" href="/css/scrollbar.css" />
-    <link rel="stylesheet" href="/css/games.css" />
-    <link rel="stylesheet" href="/css/navbare.css">
+  
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
+     <style>
+  
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter';
+}
+body {
+  background: #16181c;
+  font-weight: 400;
+}
+  
+        .nav {
+            position: fixed;
+            top: 20px;
+            left: 13px;
+            width: 98%;
+            border-radius: 25px;
+            background-color: #12161D;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 7vw; 
+            z-index: 1000; 
+        }
+        .nav .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0; 
+            justify-content: center;
+            align-items: center; 
+            margin-left: -100px; 
+        }
+        .nav .nav-links .nav-item {
+            font-size: 20px;
+            color: #b03232;
+            text-decoration: none;
+            transition: color 0.2s linear;
+            margin-right: 32px; 
+            font-family: 'Inter', sans-serif; 
+            font-weight: bold; 
+            letter-spacing: 2px; 
+        }
+        .nav .nav-links .nav-item:last-child {
+            margin-right: 100; 
+        }
+        .nav .nav-links .nav-item:hover {
+            color: #892929;
+        }
+        .nav .logo {
+            margin-right: auto;
+            margin-bottom: 20px;
+          margin-left: 30px;
+        }
+        .nav .logo img {
+            height: 128px;
+        }
+        
+    
+      .nav-links {
+        
+      margin-right: 10;
+      
+      }
+
+
+select {
+  background: #27292e;
+  font-family: 'Montserrat';
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  transition: 300ms;
+}
+
+label {
+  font-family: 'Inter';
+}
+
+select:active {
+  transform: scale(1.05);
+}
+
+option {
+  font-family: 'Inter';
+  color: #b03232;
+  padding: 5px;
+}
+
+
+        #copyright {
+            font-size: 14px;
+            margin-top: 2px;
+            font-weight: bold; /* Increased font weight */
+            color: #b03232; /* Color of C Copyright PLEXILE ARCADE text */
+            cursor: pointer;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        #copyright:hover {
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(5px); }
+
+  
+  </style>
+<style>
+.container {
+        width: 1000px; 
+        margin: 0 auto;
+        
+    }
+    .box {
+        position: relative;
+        background-color: #12161D;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 35px;
+        width: 1090px;
+        box-sizing: border-box;
+        top: 129px;
+        right: 150px;
+    }
+    .embed-container {
+        top: 0px;
+        position: relative;
+        padding-bottom: 40.25%; 
+        height: 0;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .embed-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+       border-radius: 10px;
+    }
+    .content-below-embed {
+        margin-top: 20px; 
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+    }
+    .overlay {
+        display: flex;
+        align-items: center;
+    }
+    .image {
+        width: 52px; 
+        height: 52px; 
+        border-radius: 8px;
+        margin-right: 10px;
+    }
+    .text {
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        margin-right: 10px;
+    }
+    .fullscreen-img {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+  
+      body {
+        cursor: url("https://cdn.glitch.global/5974de2d-be05-4647-b3ac-08c6e71752fc/Removal-791.png?v=1707616156693"),
+          auto;
+      }
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://cdn.glitch.global/8ccf4cfa-741f-4630-8f29-733b36d972e6/f97cae64-03b4-4b89-94ec-0dacf077ea89.image.png?v=1705798388344') center/cover no-repeat; /* Add your background image */
+    color: White;
+
+.snowball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #b03232; 
+  border-radius: 50%;
+  pointer-events: none; 
+  z-index: -1; 
+  opacity: 0.6; 
+  animation: snowdrift 8s infinite alternate; 
+}
+
+.transparent {
+  opacity: 0.4; 
+}
+
+.light {
+  background-color: #f5aaaa; 
+}
+
+.small {
+  width: 5px;
+  height: 5px;
+}
+
+@keyframes snowdrift {
+  0% {
+    transform: translate(-4px, -4px);
+  }
+  100% {
+    transform: translate(4px, 4px);
+  }
+}
+    
+</style>
+ <style>
+    ::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #16181C;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b03232;
+  border-radius: 15px;
+  height: 2px;
+}
+  </style>
+  
+  <style>
         .content-below-embed {
             position: relative;
         }
@@ -37,9 +282,9 @@
       
       
       
-      
+      </style>
        <style>
- body {
+  body {
             font-family: Arial, sans-serif;
             width: 100%;
             margin: 0;
