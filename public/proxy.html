@@ -131,11 +131,11 @@
                   if (isValidURL(inputValue)) {
                       
                       const encodedValue = btoa("http://" + inputValue);
-                      window.location.href = "/web/_" + encodedValue + '_/';
+                      window.location.href = "/pa/_" + encodedValue + '_/';
                   } else {
                      
                       const searchQuery = '/search?q=' + encodeURIComponent(inputValue);
-                      window.location.href = "/web/_aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==_" + searchQuery;
+                      window.location.href = "/pa/_aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==_" + searchQuery;
                   }
               }
 
