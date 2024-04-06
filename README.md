@@ -6,7 +6,7 @@ Its simply the best unblocked site for you!
 - It also has over 21 Apps
 - It has cool settings
 - It has a working Custom Proxy!
-- & it even has hundreds of links like https://plexilearcade.glitch.me
+- & it even has hundreds of links like https://plexilearcade.xyz
 
 Join PLEXILE ARCADE Now & get ready to arcade at school!
 
